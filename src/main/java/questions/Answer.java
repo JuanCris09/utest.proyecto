@@ -3,7 +3,7 @@ package questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-import userinterface.SearchCoursePage;
+import userinterface.UtestCompletPage;
 
 public class Answer implements Question<Boolean> {
     private String question;
@@ -19,9 +19,9 @@ public class Answer implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         boolean result;
-        String nameCourse = Text.of(SearchCoursePage.NAME_COURSE).
+        String RegisForm = Text.of(UtestCompletPage.COMPLETE_BUTTON).
                 viewedBy(actor).asString();
-        if (question.equals(nameCourse)){
+        if (question.equals(RegisForm)){
             result= true;
         }else {
             result = false;

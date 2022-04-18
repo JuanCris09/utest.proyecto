@@ -4,9 +4,15 @@
 
 @stories
 Feature: academy utest
-  As a user i want to learn to test mobile applications on the utest platform
+  As a user i wants to register on the uTest platform
   @scenario1
-  Scenario: Find a mobile app testing course
-    Given that Juan wants to learn testing on the utest platform
-    When he searches for the uTest Mobile App course on the utest academy platform
-    Then he finds the course called uTest Mobile App
+  Scenario: Search the Utest platform
+    Given that Juan wants to register on the uTest platform
+    | strEmail| strPassword |
+    | TuCorreo| TuClave     |
+    When he registers on the uTest platform
+    |strRegistro|
+    |formulario registro uTest|
+    Then he should be registered on the uTest platform
+      |strRegistro|
+      |formulario registro uTest|
